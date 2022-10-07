@@ -74,17 +74,32 @@
 
 // //6. Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called.
 
-const numArgs = function ([x, y], w) {
-  return numArgs.length;
-};
-console.log(numArgs([2, 4], 3));
+// const numArgs = function ([x, y], w) {
+//   return numArgs.length;
+// };
+// console.log(numArgs([2, 4], 3));
 
 // terminal prints 2
 // alternate arguments to #6:
 
-const numberArgs = function (w, x, y, z) {
-  return numberArgs.length;
-};
-console.log(numberArgs(2, 4, 6, 7));
+// const numberArgs = function (w, x, y, z) {
+//   return numberArgs.length;
+// };
+// console.log(numberArgs(2, 4, 6, 7));
 
 //terminal prints 2 then 4
+
+// #7 Define a function, as a function declaration, reverseStringthat takes a string, reverses the characters, and returns it. For example, reverseString('rockstar');would return the string "ratskcor".
+
+function reverseString(aString) {
+  let reverseString = "";
+  for (let i = aString.length - 1; i >= 0; i--) {
+    reverseString += aString[i];
+  }
+
+  return reverseString;
+}
+
+console.log(reverseString("rockstar"));
+
+// terminal printed ratskcor
