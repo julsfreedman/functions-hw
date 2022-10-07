@@ -1,73 +1,90 @@
-// //1.
-// // function maxOfTwoNumbers(x, y) {
-// //   if (x >= y) return x;
-// //   else return y;
+// // //1.
+// // // function maxOfTwoNumbers(x, y) {
+// // //   if (x >= y) return x;
+// // //   else return y;
+// // // }
+
+// // // console.log(maxOfTwoNumbers(10, 20));
+
+// // //terminal printed 20
+
+// // // //2.
+// // // const maxOfThree = function (x, y, z) {
+// // //   if (x >= y && x >= z) return x;
+// // //   if (y >= z) return y;
+// // //   else return z;
+// // // };
+
+// // // console.log(maxOfThree(2, 4, 6));
+
+// // // //terminal printed 6 for (2, 4, 6) and also worked for all other tested arguments
+
+// // //3.
+// // // function isCharAVowel(x) {
+// // //   if (x === "a" || x === "e" || x === "i" || x === "o" || x === "u") {
+// // //     return "true";
+// // //   }
+// // //   else {
+// // //     return "false";
+// // // }
+// // // console.log(isCharAVowel('a'))
+
+// // function isCharAVowel(char) {
+// //   return (
+// //     char === "a" ||
+// //     char === "e" ||
+// //     char === "i" ||
+// //     char === "o" ||
+// //     char === "u" ||
+// //     false
+// //   );
 // // }
+// // console.log(isCharAVowel("b"));
+// // //  printed false  for argument  "b" and printed true for argument  "a"
+// // // go over this one #3 in office hours (why doesn't my first answer work?)
 
-// // console.log(maxOfTwoNumbers(10, 20));
+// //4. Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
 
-// //terminal printed 20
-
-// // //2.
-// // const maxOfThree = function (x, y, z) {
-// //   if (x >= y && x >= z) return x;
-// //   if (y >= z) return y;
-// //   else return z;
+// // const sumArray = function ([x, y, z]) {
+// //   return x + y + z;
 // // };
+// // console.log(sumArray([2, 4, 5]));
 
-// // console.log(maxOfThree(2, 4, 6));
+// // //terminal printed 11
+// // //or - alternate answer to #4:
 
-// // //terminal printed 6 for (2, 4, 6) and also worked for all other tested arguments
-
-// //3.
-// // function isCharAVowel(x) {
-// //   if (x === "a" || x === "e" || x === "i" || x === "o" || x === "u") {
-// //     return "true";
+// // const sumArray2 = function ([x, y, z]) {
+// //   const array = [x, y, z];
+// //   let sum = 0;
+// //   for (let i = 0; i < array.length; i++) {
+// //     sum += array[i];
 // //   }
-// //   else {
-// //     return "false";
-// // }
-// // console.log(isCharAVowel('a'))
+// //   return sum;
+// // };
+// // console.log(sumArray2([2, 4, 5]));
 
-// function isCharAVowel(char) {
-//   return (
-//     char === "a" ||
-//     char === "e" ||
-//     char === "i" ||
-//     char === "o" ||
-//     char === "u" ||
-//     false
-//   );
+// // terminal printed 11
+
+// //5. Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
+
+// function multipleArray([x, y, z]) {
+//   return x * y * z;
 // }
-// console.log(isCharAVowel("b"));
-// //  printed false  for argument  "b" and printed true for argument  "a"
-// // go over this one #3 in office hours (why doesn't my first answer work?)
+// console.log(multipleArray([2, 4, 5]));
 
-//4. Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
+// //6. Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called.
 
-// const sumArray = function ([x, y, z]) {
-//   return x + y + z;
-// };
-// console.log(sumArray([2, 4, 5]));
+const numArgs = function ([x, y], w) {
+  return numArgs.length;
+};
+console.log(numArgs([2, 4], 3));
 
-// //terminal printed 11
-// //or - alternate answer to #4:
+// terminal prints 2
+// alternate arguments to #6:
 
-// const sumArray2 = function ([x, y, z]) {
-//   const array = [x, y, z];
-//   let sum = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     sum += array[i];
-//   }
-//   return sum;
-// };
-// console.log(sumArray2([2, 4, 5]));
+const numberArgs = function (w, x, y, z) {
+  return numberArgs.length;
+};
+console.log(numberArgs(2, 4, 6, 7));
 
-// terminal printed 11
-
-//5. Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
-
-function multipleArray([x, y, z]) {
-  return x * y * z;
-}
-console.log(multipleArray([2, 4, 5]));
+//terminal prints 2 then 4
