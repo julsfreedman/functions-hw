@@ -45,22 +45,29 @@
 
 //4. Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
 
-const sumArray = function ([x, y, z]) {
-  return x + y + z;
-};
-console.log(sumArray([2, 4, 5]));
+// const sumArray = function ([x, y, z]) {
+//   return x + y + z;
+// };
+// console.log(sumArray([2, 4, 5]));
 
-//terminal printed 11
-//or - alternate answer to #4:
+// //terminal printed 11
+// //or - alternate answer to #4:
 
-const sumArray2 = function ([x, y, z]) {
-  const array = [x, y, z];
-  let sum = 0;
-  for (let i = 0; i < array.length; i++) {
-    sum += array[i];
-  }
-  return sum;
-};
-console.log(sumArray2([2, 4, 5]));
+// const sumArray2 = function ([x, y, z]) {
+//   const array = [x, y, z];
+//   let sum = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     sum += array[i];
+//   }
+//   return sum;
+// };
+// console.log(sumArray2([2, 4, 5]));
 
 // terminal printed 11
+
+//5. Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
+
+function multipleArray([x, y, z]) {
+  return x * y * z;
+}
+console.log(multipleArray([2, 4, 5]));
