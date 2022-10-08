@@ -91,15 +91,30 @@
 
 // #7 Define a function, as a function declaration, reverseStringthat takes a string, reverses the characters, and returns it. For example, reverseString('rockstar');would return the string "ratskcor".
 
-function reverseString(aString) {
-  let reverseString = "";
-  for (let i = aString.length - 1; i >= 0; i--) {
-    reverseString += aString[i];
-  }
+// function reverseString(aString) {
+//   let reverseString = "";
+//   for (let i = aString.length - 1; i >= 0; i--) {
+//     reverseString += aString[i];
+//   }
 
-  return reverseString;
-}
+//   return reverseString;
+// }
 
-console.log(reverseString("rockstar"));
+// console.log(reverseString("rockstar"));
 
 // terminal printed ratskcor
+
+// #8 Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument and returns the length of the longest string.
+
+const longestStringInArray = function (array) {
+  let longest = 0;
+  for (let x = 0; x < array.length; x++) {
+    if (array[x].length > longest) {
+      longest = array[x].length;
+    }
+  }
+  return longest;
+};
+
+console.log(longestStringInArray(["Aloha", "shoots", "pau"]));
+// Terminal printed 6 which is correct b/c the longest string is "shoots" which has a lenght of six
