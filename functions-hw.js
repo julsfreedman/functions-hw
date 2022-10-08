@@ -106,15 +106,30 @@
 
 // #8 Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument and returns the length of the longest string.
 
-const longestStringInArray = function (array) {
-  let longest = 0;
-  for (let x = 0; x < array.length; x++) {
-    if (array[x].length > longest) {
-      longest = array[x].length;
+// const longestStringInArray = function (array) {
+//   let longest = 0;
+//   for (let x = 0; x < array.length; x++) {
+//     if (array[x].length > longest) {
+//       longest = array[x].length;
+//     }
+//   }
+//   return longest;
+// };
+
+// console.log(longestStringInArray(["Aloha", "shoots", "pau"]));
+// Terminal printed 6 which is correct b/c the longest string is "shoots" which has a lenght of six
+
+// #9 Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments, and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would return ["hello", "morning"].
+
+function stringsLongerThan(array, num) {
+  const resultArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > num) {
+      resultArray.push(array[i]);
     }
   }
-  return longest;
-};
+  return resultArray;
+}
 
-console.log(longestStringInArray(["Aloha", "shoots", "pau"]));
-// Terminal printed 6 which is correct b/c the longest string is "shoots" which has a lenght of six
+console.log(stringsLongerThan(["say", "hello", "in", "the", "morning"], 3));
+//Terminal printed ['hell', 'morning']
